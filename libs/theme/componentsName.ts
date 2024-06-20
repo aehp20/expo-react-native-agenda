@@ -4,4 +4,5 @@ export const componentsName = {
   box: "box",
   text: "text",
   collapsible: "collapsible",
+  tabs: "tabs",
 };

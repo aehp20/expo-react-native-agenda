@@ -8,6 +8,7 @@ import {
   stylesCollapsiblePropertiesName,
 } from "./collapsible";
 import { stylesScreen, stylesScreenPropertiesName } from "./screen";
+import { stylesTabs, stylesTabsPropertiesName } from "./tabs";
 import { stylesText, stylesTextPropertiesName } from "./text";
 
 export type StylesProps = {
@@ -29,6 +30,7 @@ export const styles: ThemesProps = {
     [componentsName.box]: stylesBox[themes.light],
     [componentsName.text]: stylesText[themes.light],
     [componentsName.collapsible]: stylesCollapsible[themes.light],
+    [componentsName.tabs]: stylesTabs[themes.light],
   },
   [themes.dark]: {
     [componentsName.app]: stylesApp[themes.dark],
@@ -36,6 +38,7 @@ export const styles: ThemesProps = {
     [componentsName.box]: stylesBox[themes.dark],
     [componentsName.text]: stylesText[themes.dark],
     [componentsName.collapsible]: stylesCollapsible[themes.dark],
+    [componentsName.tabs]: stylesTabs[themes.dark],
   },
 };
 
@@ -45,4 +48,5 @@ export const stylesPropertiesName: StylesPropertiesNameProps = {
   [componentsName.box]: stylesBoxPropertiesName,
   [componentsName.text]: stylesTextPropertiesName,
   [componentsName.collapsible]: stylesCollapsiblePropertiesName,
+  [componentsName.tabs]: stylesTabsPropertiesName,
 };

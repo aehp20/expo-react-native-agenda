@@ -2,7 +2,8 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { ReactNode, useState } from "react";
 import { StyleSheet, TouchableOpacity } from "react-native";
 
-import { Box, Text } from "@/libs/design-system";
+import Box from "@/libs/design-system/box/Box";
+import Text from "@/libs/design-system/text/Text";
 import { componentsName, useThemeStyles } from "@/libs/theme";
 
 type CollapsibleProps = {
