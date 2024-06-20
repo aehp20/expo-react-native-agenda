@@ -3,6 +3,7 @@ import { themes } from "../themes";
 
 import { stylesApp, stylesAppPropertiesName } from "./app";
 import { stylesBox, stylesBoxPropertiesName } from "./box";
+import { stylesText, stylesTextPropertiesName } from "./text";
 // import { stylesButton, stylesButtonPropertiesName } from './button';
 // import { stylesCard, stylesCardPropertiesName } from './card';
 // import { stylesDialog, stylesDialogPropertiesName } from './dialog';
@@ -39,6 +40,7 @@ export const styles: ThemesProps = {
   [themes.light]: {
     [componentsName.app]: stylesApp[themes.light],
     [componentsName.box]: stylesBox[themes.light],
+    [componentsName.text]: stylesText[themes.light],
     // [componentsName.button]: stylesButton[themes.light],
     // [componentsName.label]: stylesLabel[themes.light],
     // [componentsName.input]: stylesInput[themes.light],
@@ -59,6 +61,7 @@ export const styles: ThemesProps = {
   [themes.dark]: {
     [componentsName.app]: stylesApp[themes.dark],
     [componentsName.box]: stylesBox[themes.dark],
+    [componentsName.text]: stylesText[themes.dark],
     // [componentsName.button]: stylesButton[themes.dark],
     // [componentsName.label]: stylesLabel[themes.dark],
     // [componentsName.input]: stylesInput[themes.dark],
@@ -81,6 +84,7 @@ export const styles: ThemesProps = {
 export const stylesPropertiesName: StylesPropertiesNameProps = {
   [componentsName.app]: stylesAppPropertiesName,
   [componentsName.box]: stylesBoxPropertiesName,
+  [componentsName.text]: stylesTextPropertiesName,
   // [componentsName.button]: stylesButtonPropertiesName,
   // [componentsName.label]: stylesLabelPropertiesName,
   // [componentsName.input]: stylesInputPropertiesName,

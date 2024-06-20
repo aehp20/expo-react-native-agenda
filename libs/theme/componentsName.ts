@@ -1,6 +1,7 @@
 export const componentsName = {
   app: "app",
   box: "box",
+  text: "text",
   // button: "button",
   // input: "input",
   // label: "label",

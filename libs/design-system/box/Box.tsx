@@ -1,5 +1,4 @@
-import { componentsName } from "@/libs/theme";
-import { useThemeStyles } from "@/libs/theme/ThemeProvider";
+import { componentsName, useThemeStyles } from "@/libs/theme";
 
 import { View, type ViewProps } from "react-native";
 

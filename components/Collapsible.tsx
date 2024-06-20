@@ -2,9 +2,8 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { PropsWithChildren, useState } from "react";
 import { StyleSheet, TouchableOpacity, useColorScheme } from "react-native";
 
-import { ThemedText } from "@/components/ThemedText";
 import { Colors } from "@/constants/Colors";
-import { Box } from "@/libs/design-system";
+import { Box, Text } from "@/libs/design-system";
 
 export function Collapsible({
   children,
@@ -25,7 +24,7 @@ export function Collapsible({
           size={18}
           color={theme === "light" ? Colors.light.icon : Colors.dark.icon}
         />
-        <ThemedText type="defaultSemiBold">{title}</ThemedText>
+        <Text type="defaultSemiBold">{title}</Text>
       </TouchableOpacity>
       {isOpen && <Box style={styles.content}>{children}</Box>}
     </Box>
