@@ -72,7 +72,7 @@ export default function ExploreScreen() {
       <Collapsible title="Light and dark mode components">
         <Text>
           This template has light and dark mode support. The{" "}
-          <Text type="defaultSemiBold">useColorScheme()</Text> hook lets you
+          <Text type="defaultSemiBold">useThemeContext()</Text> hook lets you
           inspect what the user's current color scheme is, and so you can adjust
           UI colors accordingly.
         </Text>
