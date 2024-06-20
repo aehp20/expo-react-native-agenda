@@ -16,7 +16,7 @@ export default function Collapsible(props: CollapsibleProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   const { styles, stylesPropertiesName } = useThemeStyles(
-    componentsName.screen,
+    componentsName.collapsible,
   );
 
   const { COLOR } = stylesPropertiesName;
