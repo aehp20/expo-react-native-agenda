@@ -1,9 +1,8 @@
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Image, Platform, StyleSheet } from "react-native";
 
-import { Collapsible } from "@/components/Collapsible";
 import { ExternalLink } from "@/components/ExternalLink";
-import { Box, Screen, Text } from "@/libs/design-system";
+import { Box, Collapsible, Screen, Text } from "@/libs/design-system";
 
 export default function ExploreScreen() {
   return (
