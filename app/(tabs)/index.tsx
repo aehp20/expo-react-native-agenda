@@ -1,7 +1,6 @@
 import { Image, Platform, StyleSheet } from "react-native";
 
-import { HelloWave } from "@/components/HelloWave";
-import { Box, Screen, Text } from "@/libs/design-system";
+import { Box, HelloWaveIcon, Screen, Text } from "@/libs/design-system";
 
 export default function HomeScreen() {
   return (
@@ -15,7 +14,7 @@ export default function HomeScreen() {
     >
       <Box style={styles.titleContainer}>
         <Text type="title">Welcome 2!</Text>
-        <HelloWave />
+        <HelloWaveIcon />
       </Box>
       <Box style={styles.stepContainer}>
         <Text type="subtitle">Step 1: Try it</Text>

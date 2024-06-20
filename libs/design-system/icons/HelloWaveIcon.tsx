@@ -9,7 +9,7 @@ import Animated, {
 
 import { Text } from "@/libs/design-system";
 
-export function HelloWave() {
+export default function HelloWaveIcon() {
   const rotationAnimation = useSharedValue(0);
 
   rotationAnimation.value = withRepeat(
