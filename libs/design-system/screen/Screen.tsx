@@ -1,5 +1,5 @@
 import type { PropsWithChildren, ReactElement } from "react";
-import { StyleSheet, useColorScheme } from "react-native";
+import { StyleSheet } from "react-native";
 import Animated, {
   interpolate,
   useAnimatedRef,
@@ -8,22 +8,25 @@ import Animated, {
 } from "react-native-reanimated";
 
 import { Box } from "@/libs/design-system";
+import { componentsName, useThemeStyles } from "@/libs/theme";
 
 const HEADER_HEIGHT = 250;
 
 type Props = PropsWithChildren<{
   headerImage: ReactElement;
-  headerBackgroundColor: { dark: string; light: string };
 }>;
 
-export default function ParallaxScrollView({
-  children,
-  headerImage,
-  headerBackgroundColor,
-}: Props) {
-  const colorScheme = useColorScheme() ?? "light";
+export default function Screen({ children, headerImage }: Props) {
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
+
+  const { styles, stylesPropertiesName } = useThemeStyles(
+    componentsName.screen,
+  );
+
+  const { BG_COLOR } = stylesPropertiesName;
+
+  const screenStyles = { backgroundColor: styles[BG_COLOR] };
 
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
@@ -50,21 +53,17 @@ export default function ParallaxScrollView({
     <Box>
       <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
         <Animated.View
-          style={[
-            styles.header,
-            { backgroundColor: headerBackgroundColor[colorScheme] },
-            headerAnimatedStyle,
-          ]}
+          style={[screenStyles, styleSheet.header, headerAnimatedStyle]}
         >
           {headerImage}
         </Animated.View>
-        <Box style={styles.content}>{children}</Box>
+        <Box style={styleSheet.content}>{children}</Box>
       </Animated.ScrollView>
     </Box>
   );
 }
 
-const styles = StyleSheet.create({
+const styleSheet = StyleSheet.create({
   header: {
     height: 250,
     overflow: "hidden",

@@ -3,6 +3,7 @@ import { themes } from "../themes";
 
 import { stylesApp, stylesAppPropertiesName } from "./app";
 import { stylesBox, stylesBoxPropertiesName } from "./box";
+import { stylesScreen, stylesScreenPropertiesName } from "./screen";
 import { stylesText, stylesTextPropertiesName } from "./text";
 // import { stylesButton, stylesButtonPropertiesName } from './button';
 // import { stylesCard, stylesCardPropertiesName } from './card';
@@ -39,6 +40,7 @@ export type ThemesProps = {
 export const styles: ThemesProps = {
   [themes.light]: {
     [componentsName.app]: stylesApp[themes.light],
+    [componentsName.screen]: stylesScreen[themes.light],
     [componentsName.box]: stylesBox[themes.light],
     [componentsName.text]: stylesText[themes.light],
     // [componentsName.button]: stylesButton[themes.light],
@@ -60,6 +62,7 @@ export const styles: ThemesProps = {
   },
   [themes.dark]: {
     [componentsName.app]: stylesApp[themes.dark],
+    [componentsName.screen]: stylesScreen[themes.dark],
     [componentsName.box]: stylesBox[themes.dark],
     [componentsName.text]: stylesText[themes.dark],
     // [componentsName.button]: stylesButton[themes.dark],
@@ -83,6 +86,7 @@ export const styles: ThemesProps = {
 
 export const stylesPropertiesName: StylesPropertiesNameProps = {
   [componentsName.app]: stylesAppPropertiesName,
+  [componentsName.screen]: stylesScreenPropertiesName,
   [componentsName.box]: stylesBoxPropertiesName,
   [componentsName.text]: stylesTextPropertiesName,
   // [componentsName.button]: stylesButtonPropertiesName,

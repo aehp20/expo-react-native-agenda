@@ -1,13 +1,11 @@
 import { Image, Platform, StyleSheet } from "react-native";
 
 import { HelloWave } from "@/components/HelloWave";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { Box, Text } from "@/libs/design-system";
+import { Box, Screen, Text } from "@/libs/design-system";
 
 export default function HomeScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: "#A1CEDC", dark: "#1D3D47" }}
+    <Screen
       headerImage={
         <Image
           source={require("@/assets/images/partial-react-logo.png")}
@@ -47,7 +45,7 @@ export default function HomeScreen() {
           <Text type="defaultSemiBold">app-example</Text>.
         </Text>
       </Box>
-    </ParallaxScrollView>
+    </Screen>
   );
 }
 

@@ -3,13 +3,11 @@ import { Image, Platform, StyleSheet } from "react-native";
 
 import { Collapsible } from "@/components/Collapsible";
 import { ExternalLink } from "@/components/ExternalLink";
-import ParallaxScrollView from "@/components/ParallaxScrollView";
-import { Box, Text } from "@/libs/design-system";
+import { Box, Screen, Text } from "@/libs/design-system";
 
-export default function TabTwoScreen() {
+export default function ExploreScreen() {
   return (
-    <ParallaxScrollView
-      headerBackgroundColor={{ light: "#D0D0D0", dark: "#353636" }}
+    <Screen
       headerImage={
         <Ionicons size={310} name="code-slash" style={styles.headerImage} />
       }
@@ -90,15 +88,13 @@ export default function TabTwoScreen() {
           ios: (
             <Text>
               The{" "}
-              <Text type="defaultSemiBold">
-                components/ParallaxScrollView.tsx
-              </Text>{" "}
+              <Text type="defaultSemiBold">libs/design-system/Screen.tsx</Text>{" "}
               component provides a parallax effect for the header image.
             </Text>
           ),
         })}
       </Collapsible>
-    </ParallaxScrollView>
+    </Screen>
   );
 }
 
