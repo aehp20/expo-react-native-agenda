@@ -30,7 +30,6 @@ export default function Tabs(props: TabLayoutProps) {
     >
       {items.map((item) => {
         const { name, title, iconName } = item;
-        console.log("iconName: ", iconName);
 
         const iconNameFocused = iconName;
         const iconNameOutline: any = `${item.iconName}-outline`;
