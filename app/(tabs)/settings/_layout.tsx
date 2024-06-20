@@ -2,6 +2,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet } from "react-native";
 
 import { Box, Screen, Text } from "@/libs/design-system";
+import ThemeField from "./theme";
 
 export default function SettingsScreen() {
   return (
@@ -13,7 +14,10 @@ export default function SettingsScreen() {
       <Box style={styles.titleContainer}>
         <Text type="title">Settings</Text>
       </Box>
-      <Text>This app includes example code to help you get started.</Text>
+
+      <Box style={styles.field}>
+        <ThemeField />
+      </Box>
     </Screen>
   );
 }
@@ -28,5 +32,9 @@ const styles = StyleSheet.create({
   titleContainer: {
     flexDirection: "row",
     gap: 8,
+  },
+  field: {
+    flexDirection: "column",
+    gap: 4,
   },
 });

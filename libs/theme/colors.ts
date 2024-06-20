@@ -24,4 +24,5 @@ export const colors: { [key: string]: string } = {
   Bole: "#774440",
   Grilled: "#634130",
   KellyGreen: "#07bc0c",
+  Gray300: "#D1D5DB",
 };

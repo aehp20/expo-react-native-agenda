@@ -5,4 +5,6 @@ export const componentsName = {
   text: "text",
   collapsible: "collapsible",
   tabs: "tabs",
+  dropdown: "dropdown",
+  label: "label",
 };
