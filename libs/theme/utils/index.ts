@@ -1,6 +1,6 @@
 // import Cookies from 'js-cookie';
 
-const THEME_COOKIE_NAME = "NX_TODOS_THEME";
+// const THEME_COOKIE_NAME = "NX_TODOS_THEME";
 
 export const getThemeCookie = (
   defaultTheme: string,
