@@ -1,50 +1,29 @@
-import { componentsName, useThemeStyles } from "@/libs/theme";
-
 import RNPickerSelect from "react-native-picker-select";
 
-export type Option = {
-  value: string;
-  label: string;
-};
+import DropdownIcon from "./DropdownIcon";
+import type { DropdownProps } from "./types";
+import useDropdown from "./useDropdown";
 
-// export type DropdownProps = Omit<Props, "onChange" | "noOptionsMessage"> & {
-//   customStyles?: Record<string, string>;
-//   noOptionsMessage?: string;
-//   onChange: (option: Option) => void;
-// };
-
-export type DropdownProps = any;
-
-export function Dropdown({
-  value,
-  options,
-  onChange,
-  placeholder,
-  customStyles,
-  noOptionsMessage,
-  isDisabled,
-  isSearchable = false,
-  blurInputOnSelect = true,
-  ...props
-}: DropdownProps) {
-  const { styles, stylesPropertiesName } = useThemeStyles(
-    componentsName.dropdown,
-  );
-
+export default function Dropdown(props: DropdownProps) {
   const {
-    BG_COLOR,
-    BG_COLOR_HOVER,
-    BG_COLOR_DISABLED,
-    BORDER_COLOR,
-    BORDER_COLOR_HOVER,
-  } = stylesPropertiesName;
+    value,
+    options,
+    onChange,
+    placeholder,
+    isDisabled,
+    pickerSelectStyles,
+  } = useDropdown(props);
 
   return (
     <RNPickerSelect
       onValueChange={onChange}
       items={options}
       placeholder={placeholder}
-      itemKey={value}
+      value={value}
+      style={pickerSelectStyles}
+      useNativeAndroidPickerStyle={false}
+      disabled={isDisabled}
+      Icon={() => <DropdownIcon />}
     />
   );
 }

@@ -1,5 +1,7 @@
-import { Dropdown, Label, Option } from "@/libs/design-system";
+import { Box, Dropdown, Label, Option } from "@/libs/design-system";
 import { themes, useThemeContext } from "@/libs/theme";
+
+import { StyleSheet } from "react-native";
 
 export default function ThemeField() {
   const { theme, setTheme } = useThemeContext();
@@ -24,7 +26,7 @@ export default function ThemeField() {
   };
 
   return (
-    <div className="flex flex-col w-1/2 md:w-1/4 gap-1">
+    <Box style={styleSheet.container}>
       <Label>Theme</Label>
       <Dropdown
         value={selectedValue ? selectedValue.value : undefined}
@@ -32,6 +34,12 @@ export default function ThemeField() {
         onChange={handleChange}
         placeholder={{ label: "Select a theme...", value: "select" }}
       />
-    </div>
+    </Box>
   );
 }
+
+const styleSheet = StyleSheet.create({
+  container: {
+    flexDirection: "column",
+  },
+});

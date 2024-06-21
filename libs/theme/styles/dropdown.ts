@@ -1,6 +1,7 @@
 import { colors } from "../colors";
 import { themes } from "../themes";
 
+const COLOR = "COLOR";
 const BG_COLOR = "BG_COLOR";
 const BG_COLOR_HOVER = "BG_COLOR_HOVER";
 const BG_COLOR_DISABLED = "BG_COLOR_DISABLED";
@@ -8,6 +9,7 @@ const BORDER_COLOR = "BORDER_COLOR";
 const BORDER_COLOR_HOVER = "BORDER_COLOR_HOVER";
 
 export const stylesDropdownPropertiesName = {
+  COLOR,
   BG_COLOR,
   BG_COLOR_HOVER,
   BG_COLOR_DISABLED,
@@ -17,6 +19,7 @@ export const stylesDropdownPropertiesName = {
 
 export const stylesDropdown = {
   [themes.light]: {
+    [COLOR]: colors.MediumJungleGreen,
     [BG_COLOR]: colors.Alabaster,
     [BG_COLOR_HOVER]: colors.Eggshell,
     [BG_COLOR_DISABLED]: colors.Gray300,
@@ -24,6 +27,7 @@ export const stylesDropdown = {
     [BORDER_COLOR_HOVER]: colors.MetallicSeaweedHover,
   },
   [themes.dark]: {
+    [COLOR]: colors.PenguinWhite,
     [BG_COLOR]: colors.Kurotobi,
     [BG_COLOR_HOVER]: colors.DarkLava,
     [BG_COLOR_DISABLED]: colors.Gray300,
