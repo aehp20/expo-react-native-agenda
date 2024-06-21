@@ -44,6 +44,7 @@ export function Dropdown({
       onValueChange={onChange}
       items={options}
       placeholder={placeholder}
+      itemKey={value}
     />
   );
 }

@@ -27,7 +27,7 @@ export default function ThemeField() {
     <div className="flex flex-col w-1/2 md:w-1/4 gap-1">
       <Label>Theme</Label>
       <Dropdown
-        // value={selectedValue}
+        value={selectedValue ? selectedValue.value : undefined}
         options={options}
         onChange={handleChange}
         placeholder={{ label: "Select a theme...", value: "select" }}
