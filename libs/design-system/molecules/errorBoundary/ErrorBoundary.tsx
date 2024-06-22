@@ -18,24 +18,27 @@ export default function ErrorBoundary(props: ErrorBoundaryProps) {
     componentsName.errorBoundary,
   );
 
-  const { BG_COLOR, BORDER_COLOR } = stylesPropertiesName;
+  const { COLOR_HEADER, BG_COLOR_HEADER, BORDER_COLOR } = stylesPropertiesName;
 
-  const bgColor = `bg-${styles[BG_COLOR]}`;
-  const borderColor = `border-${styles[BORDER_COLOR]}`;
+  const colorHeader = styles[COLOR_HEADER];
+  const bgColorHeader = styles[BG_COLOR_HEADER];
+  const borderColor = styles[BORDER_COLOR];
 
   const styleSheet = StyleSheet.create({
     headerImage: {
-      color: "#808080",
+      color: colorHeader,
+      backgroundColor: bgColorHeader,
       bottom: -20,
       left: 0,
       position: "absolute",
+      width: "100%",
     },
     container: {
       display: "flex",
       flexDirection: "column",
       width: "100%",
     },
-    message: {
+    messageContainer: {
       display: "flex",
       justifyContent: "center",
       borderWidth: 1,
@@ -43,6 +46,10 @@ export default function ErrorBoundary(props: ErrorBoundaryProps) {
       borderTopRightRadius: 4,
       padding: 8,
       borderColor,
+      backgroundColor: bgColorHeader,
+    },
+    messageContent: {
+      color: colorHeader,
     },
     stack: {
       display: "flex",
@@ -71,8 +78,8 @@ export default function ErrorBoundary(props: ErrorBoundaryProps) {
             Please either refresh the page or return home to try again.
           </Text>
         </Box>
-        <Box style={styleSheet.message}>
-          <Text>{error.message}</Text>
+        <Box style={styleSheet.messageContainer}>
+          <Text style={styleSheet.messageContent}>{error.message}</Text>
         </Box>
         <Box style={styleSheet.stack}>
           <Text>{error.stack}</Text>

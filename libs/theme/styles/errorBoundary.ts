@@ -1,21 +1,25 @@
 import { colors } from "../colors";
 import { themes } from "../themes";
 
-const BG_COLOR = "BG_COLOR";
+const COLOR_HEADER = "COLOR_HEADER";
+const BG_COLOR_HEADER = "BG_COLOR_HEADER";
 const BORDER_COLOR = "BORDER_COLOR";
 
 export const stylesErrorBoundaryPropertiesName = {
-  BG_COLOR,
+  COLOR_HEADER,
+  BG_COLOR_HEADER,
   BORDER_COLOR,
 };
 
 export const stylesErrorBoundary = {
   [themes.light]: {
-    [BG_COLOR]: colors.Gray300,
+    [COLOR_HEADER]: colors.Alabaster,
+    [BG_COLOR_HEADER]: colors.MetallicSeaweed,
     [BORDER_COLOR]: colors.MetallicSeaweed,
   },
   [themes.dark]: {
-    [BG_COLOR]: colors.Grilled,
+    [COLOR_HEADER]: colors.Kurotobi,
+    [BG_COLOR_HEADER]: colors.ChromeYellow,
     [BORDER_COLOR]: colors.ChromeYellow,
   },
 };
