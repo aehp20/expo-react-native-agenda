@@ -7,4 +7,5 @@ export const componentsName = {
   tabs: "tabs",
   dropdown: "dropdown",
   label: "label",
+  errorBoundary: "errorBoundary",
 };

@@ -1,7 +1,7 @@
 import { Tabs as TabsExpoRouter } from "expo-router";
 import React from "react";
 
-import { TabBarIcon } from "@/libs/design-system/icons";
+import { TabBarIcon } from "@/libs/design-system/atoms/icons";
 import { componentsName, useThemeStyles } from "@/libs/theme";
 
 type Item = {

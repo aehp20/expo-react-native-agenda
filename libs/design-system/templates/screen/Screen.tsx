@@ -7,7 +7,7 @@ import Animated, {
   useScrollViewOffset,
 } from "react-native-reanimated";
 
-import Box from "@/libs/design-system/box/Box";
+import Box from "@/libs/design-system/atoms/box/Box";
 import { componentsName, useThemeStyles } from "@/libs/theme";
 
 const HEADER_HEIGHT = 250;

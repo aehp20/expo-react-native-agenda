@@ -8,6 +8,10 @@ import {
   stylesCollapsiblePropertiesName,
 } from "./collapsible";
 import { stylesDropdown, stylesDropdownPropertiesName } from "./dropdown";
+import {
+  stylesErrorBoundary,
+  stylesErrorBoundaryPropertiesName,
+} from "./errorBoundary";
 import { stylesLabel, stylesLabelPropertiesName } from "./label";
 import { stylesScreen, stylesScreenPropertiesName } from "./screen";
 import { stylesTabs, stylesTabsPropertiesName } from "./tabs";
@@ -35,6 +39,7 @@ export const styles: ThemesProps = {
     [componentsName.tabs]: stylesTabs[themes.light],
     [componentsName.dropdown]: stylesDropdown[themes.light],
     [componentsName.label]: stylesLabel[themes.light],
+    [componentsName.errorBoundary]: stylesErrorBoundary[themes.light],
   },
   [themes.dark]: {
     [componentsName.app]: stylesApp[themes.dark],
@@ -45,6 +50,7 @@ export const styles: ThemesProps = {
     [componentsName.tabs]: stylesTabs[themes.dark],
     [componentsName.dropdown]: stylesDropdown[themes.dark],
     [componentsName.label]: stylesLabel[themes.dark],
+    [componentsName.errorBoundary]: stylesErrorBoundary[themes.dark],
   },
 };
 
@@ -57,4 +63,5 @@ export const stylesPropertiesName: StylesPropertiesNameProps = {
   [componentsName.tabs]: stylesTabsPropertiesName,
   [componentsName.dropdown]: stylesDropdownPropertiesName,
   [componentsName.label]: stylesLabelPropertiesName,
+  [componentsName.errorBoundary]: stylesErrorBoundaryPropertiesName,
 };

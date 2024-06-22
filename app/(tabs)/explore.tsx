@@ -9,6 +9,8 @@ import {
   Text,
 } from "@/libs/design-system";
 
+export { ErrorBoundary } from "@/libs/design-system";
+
 export default function ExploreScreen() {
   return (
     <Screen

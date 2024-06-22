@@ -7,7 +7,7 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 
-import Text from "@/libs/design-system/text/Text";
+import Text from "@/libs/design-system/atoms/text/Text";
 
 export default function HelloWaveIcon() {
   const rotationAnimation = useSharedValue(0);
