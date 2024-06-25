@@ -1,6 +1,6 @@
 import { componentsName, useThemeStyles } from "@/libs/theme";
 
-import { View, type ViewProps } from "react-native";
+import { View, ViewStyle, type ViewProps } from "react-native";
 
 export type BoxProps = ViewProps;
 
@@ -9,13 +9,13 @@ export default function Box(props: BoxProps) {
 
   const { styles, stylesPropertiesName } = useThemeStyles(componentsName.box);
 
-  const { COLOR, BG_COLOR } = stylesPropertiesName;
+  const { BG_COLOR } = stylesPropertiesName;
 
   const viewStyles = {
-    flex: 1,
+    display: "flex",
+    flexDirection: "row",
     backgroundColor: styles[BG_COLOR],
-    color: styles[COLOR],
-  };
+  } satisfies ViewStyle;
 
   return <View style={[viewStyles, style]} {...otherProps} />;
 }

@@ -50,11 +50,11 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   titleContainer: {
-    flexDirection: "row",
     alignItems: "center",
     gap: 8,
   },
   stepContainer: {
+    flexDirection: "column",
     gap: 8,
     marginBottom: 8,
   },

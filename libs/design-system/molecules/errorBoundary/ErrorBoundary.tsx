@@ -34,12 +34,20 @@ export default function ErrorBoundary(props: ErrorBoundaryProps) {
       width: "100%",
     },
     container: {
-      display: "flex",
       flexDirection: "column",
       width: "100%",
+      gap: 4,
+    },
+    title: {
+      justifyContent: "center",
+    },
+    subTitle: {
+      justifyContent: "center",
     },
     messageContainer: {
-      display: "flex",
+      flexDirection: "column",
+    },
+    messageHeader: {
       justifyContent: "center",
       borderWidth: 1,
       borderTopLeftRadius: 4,
@@ -70,19 +78,21 @@ export default function ErrorBoundary(props: ErrorBoundaryProps) {
       }
     >
       <Box style={styleSheet.container}>
-        <Box>
+        <Box style={styleSheet.title}>
           <Text>Whoops, something went wrong.</Text>
         </Box>
-        <Box>
+        <Box style={styleSheet.subTitle}>
           <Text>
             Please either refresh the page or return home to try again.
           </Text>
         </Box>
         <Box style={styleSheet.messageContainer}>
-          <Text style={styleSheet.messageContent}>{error.message}</Text>
-        </Box>
-        <Box style={styleSheet.stack}>
-          <Text>{error.stack}</Text>
+          <Box style={styleSheet.messageHeader}>
+            <Text style={styleSheet.messageContent}>{error.message}</Text>
+          </Box>
+          <Box style={styleSheet.stack}>
+            <Text>{error.stack}</Text>
+          </Box>
         </Box>
       </Box>
     </Screen>
