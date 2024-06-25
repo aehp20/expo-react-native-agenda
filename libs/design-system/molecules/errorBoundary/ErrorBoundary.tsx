@@ -12,7 +12,7 @@ type ErrorBoundaryProps = {
 };
 
 export default function ErrorBoundary(props: ErrorBoundaryProps) {
-  const { error, retry } = props;
+  const { error } = props;
 
   const { styles, stylesPropertiesName } = useThemeStyles(
     componentsName.errorBoundary,
@@ -79,10 +79,10 @@ export default function ErrorBoundary(props: ErrorBoundaryProps) {
     >
       <Box style={styleSheet.container}>
         <Box style={styleSheet.title}>
-          <Text>Whoops, something went wrong.</Text>
+          <Text type="title">Whoops, something went wrong.</Text>
         </Box>
         <Box style={styleSheet.subTitle}>
-          <Text>
+          <Text type="subtitle">
             Please either refresh the page or return home to try again.
           </Text>
         </Box>

@@ -4,6 +4,8 @@ import { StyleSheet } from "react-native";
 import { Box, Screen, Text } from "@/libs/design-system";
 import ThemeField from "./theme";
 
+export { ErrorBoundary } from "@/libs/design-system";
+
 export default function SettingsScreen() {
   return (
     <Screen

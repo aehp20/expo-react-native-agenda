@@ -2,6 +2,8 @@ import { Image, Platform, StyleSheet } from "react-native";
 
 import { Box, HelloWaveIcon, Screen, Text } from "@/libs/design-system";
 
+export { ErrorBoundary } from "@/libs/design-system";
+
 export default function HomeScreen() {
   return (
     <Screen
