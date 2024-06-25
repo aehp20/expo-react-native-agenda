@@ -53,3 +53,5 @@ Join our community of developers creating universal apps.
 npx expo start --localhost --android
 
 npx expo lint
+
+npm run storybook-generate
