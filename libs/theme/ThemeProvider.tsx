@@ -71,8 +71,7 @@ export function ThemeProvider(props: Readonly<ThemeProviderProps>) {
 export function useThemeContext() {
   const context = useContext(ThemeContext);
   if (context === undefined) {
-    // TODO: throw new Error
-    // throw new Error('ThemeContext: Context must be used within a Provider');
+    throw new Error("ThemeContext: Context must be used within a Provider");
   }
   return context;
 }
