@@ -1,9 +1,10 @@
+import Constants from "expo-constants";
 import { useFonts } from "expo-font";
-import { Stack } from "expo-router";
 import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import "react-native-reanimated";
 
+import App from "@/components/App";
 import { ThemeProvider } from "@/libs/theme/ThemeProvider";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
@@ -24,12 +25,17 @@ export default function RootLayout() {
     return null;
   }
 
+  // Default to rendering your app
+  let AppEntryPoint = App;
+
+  // Render Storybook if storybookEnabled is true
+  if (Constants?.expoConfig?.extra?.storybookEnabled === "true") {
+    AppEntryPoint = require("../.storybook").default;
+  }
+
   return (
     <ThemeProvider theme="light">
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
-      </Stack>
+      <AppEntryPoint />
     </ThemeProvider>
   );
 }
