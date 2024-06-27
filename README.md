@@ -60,3 +60,5 @@ npm run storybook-generate
 brew services start sonarqube
 brew services stop sonarqube
 brew services info sonarqube
+
+sonar-scanner
