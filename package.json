@@ -9,6 +9,7 @@
     "ios": "expo run:ios",
     "web": "expo start --web",
     "test": "jest --watchAll",
+    "test:dev": "jest --coverage",
     "lint": "expo lint",
     "local:android": "npx expo --localhost --android",
     "storybook-generate": "sb-rn-get-stories",

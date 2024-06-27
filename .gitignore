@@ -25,3 +25,5 @@ android/
 .scannerwork
 .sonar_lock
 sonar-project.properties
+
+coverage/
