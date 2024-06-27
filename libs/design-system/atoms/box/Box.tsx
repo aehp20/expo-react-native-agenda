@@ -4,7 +4,7 @@ import { View, ViewStyle, type ViewProps } from "react-native";
 
 export type BoxProps = ViewProps;
 
-export default function Box(props: BoxProps) {
+export default function Box(props: Readonly<BoxProps>) {
   const { style, ...otherProps } = props;
 
   const { styles, stylesPropertiesName } = useThemeStyles(componentsName.box);

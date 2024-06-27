@@ -8,10 +8,9 @@ import Screen from "../../templates/screen/Screen";
 
 type ErrorBoundaryProps = {
   error: Error;
-  retry: () => Promise<void>;
 };
 
-export default function ErrorBoundary(props: ErrorBoundaryProps) {
+export default function ErrorBoundary(props: Readonly<ErrorBoundaryProps>) {
   const { error } = props;
 
   const { styles, stylesPropertiesName } = useThemeStyles(

@@ -10,6 +10,7 @@
     "web": "expo start --web",
     "test": "jest --watchAll",
     "lint": "expo lint",
+    "local:android": "npx expo --localhost --android",
     "storybook-generate": "sb-rn-get-stories",
     "storybook": "cross-env STORYBOOK_ENABLED='true' expo start",
     "storybook:ios": "cross-env STORYBOOK_ENABLED='true' expo ios",

@@ -55,3 +55,5 @@ npx expo start --localhost --android
 npx expo lint
 
 npm run storybook-generate
+
+brew services start sonarqube

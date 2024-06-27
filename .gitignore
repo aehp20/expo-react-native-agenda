@@ -20,3 +20,8 @@ expo-env.d.ts
 # @end expo-cli
 
 android/
+
+.vscode/
+.scannerwork
+.sonar_lock
+sonar-project.properties

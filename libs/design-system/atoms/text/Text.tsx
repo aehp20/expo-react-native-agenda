@@ -10,7 +10,7 @@ export type TextProps = TextPropsReactNative & {
   type?: "default" | "title" | "defaultSemiBold" | "subtitle" | "link";
 };
 
-export default function Text(props: TextProps) {
+export default function Text(props: Readonly<TextProps>) {
   const { type = "default", style, ...otherProps } = props;
 
   const { styles, stylesPropertiesName } = useThemeStyles(componentsName.text);

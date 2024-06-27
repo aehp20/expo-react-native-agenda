@@ -4,7 +4,7 @@ import DropdownIcon from "./DropdownIcon";
 import type { DropdownProps } from "./types";
 import useDropdown from "./useDropdown";
 
-export default function Dropdown(props: DropdownProps) {
+export default function Dropdown(props: Readonly<DropdownProps>) {
   const {
     value,
     options,
@@ -23,7 +23,7 @@ export default function Dropdown(props: DropdownProps) {
       style={pickerSelectStyles}
       useNativeAndroidPickerStyle={false}
       disabled={isDisabled}
-      Icon={() => <DropdownIcon />}
+      Icon={DropdownIcon}
     />
   );
 }

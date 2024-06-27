@@ -14,7 +14,7 @@ type TabLayoutProps = {
   items: Item[];
 };
 
-export default function Tabs(props: TabLayoutProps) {
+export default function Tabs(props: Readonly<TabLayoutProps>) {
   const { items } = props;
 
   const { styles, stylesPropertiesName } = useThemeStyles(componentsName.tabs);
@@ -34,18 +34,26 @@ export default function Tabs(props: TabLayoutProps) {
         const iconNameFocused = iconName;
         const iconNameOutline: any = `${item.iconName}-outline`;
 
+        const tabBarIconFunction = ({
+          color,
+          focused,
+        }: {
+          color: string;
+          focused: boolean;
+        }) => (
+          <TabBarIcon
+            name={focused ? iconNameFocused : iconNameOutline}
+            color={color}
+          />
+        );
+
         return (
           <TabsExpoRouter.Screen
             key={name}
             name={name}
             options={{
               title: title,
-              tabBarIcon: ({ color, focused }) => (
-                <TabBarIcon
-                  name={focused ? iconNameFocused : iconNameOutline}
-                  color={color}
-                />
-              ),
+              tabBarIcon: tabBarIconFunction,
             }}
           />
         );

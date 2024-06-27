@@ -8,7 +8,7 @@ import {
 
 export type LabelProps = TextPropsReactNative;
 
-export default function Label(props: LabelProps) {
+export default function Label(props: Readonly<LabelProps>) {
   const { style, ...otherProps } = props;
 
   const { styles, stylesPropertiesName } = useThemeStyles(componentsName.label);

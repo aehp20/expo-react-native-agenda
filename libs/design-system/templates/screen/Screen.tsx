@@ -8,11 +8,14 @@ import Box from "@/libs/design-system/atoms/box/Box";
 import useHeaderAnimatedStyle from "./useHeaderAnimatedStyle";
 import useScreenStyles from "./useScreenStyles";
 
-type Props = PropsWithChildren<{
+type ScreenProps = PropsWithChildren<{
   headerImage?: ReactElement;
 }>;
 
-export default function Screen({ children, headerImage }: Props) {
+export default function Screen({
+  children,
+  headerImage,
+}: Readonly<ScreenProps>) {
   const scrollRef = useAnimatedRef<Animated.ScrollView>();
   const scrollOffset = useScrollViewOffset(scrollRef);
 

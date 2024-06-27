@@ -7,11 +7,11 @@ import Text from "@/libs/design-system/atoms/text/Text";
 import { componentsName, useThemeStyles } from "@/libs/theme";
 
 type CollapsibleProps = {
-  children?: ReactNode | undefined;
+  children?: ReactNode;
   title: string;
 };
 
-export default function Collapsible(props: CollapsibleProps) {
+export default function Collapsible(props: Readonly<CollapsibleProps>) {
   const { children, title } = props;
 
   const [isOpen, setIsOpen] = useState(false);
