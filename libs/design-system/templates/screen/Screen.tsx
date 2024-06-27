@@ -9,7 +9,7 @@ import useHeaderAnimatedStyle from "./useHeaderAnimatedStyle";
 import useScreenStyles from "./useScreenStyles";
 
 type Props = PropsWithChildren<{
-  headerImage: ReactElement;
+  headerImage?: ReactElement;
 }>;
 
 export default function Screen({ children, headerImage }: Props) {
@@ -22,9 +22,11 @@ export default function Screen({ children, headerImage }: Props) {
   return (
     <Box style={[styleSheet.main]}>
       <Animated.ScrollView ref={scrollRef} scrollEventThrottle={16}>
-        <Animated.View style={[styleSheet.header, headerAnimatedStyle]}>
-          {headerImage}
-        </Animated.View>
+        {headerImage && (
+          <Animated.View style={[styleSheet.header, headerAnimatedStyle]}>
+            {headerImage}
+          </Animated.View>
+        )}
         <Box style={styleSheet.content}>{children}</Box>
       </Animated.ScrollView>
     </Box>
