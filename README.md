@@ -56,4 +56,7 @@ npx expo lint
 
 npm run storybook-generate
 
+# Sonarqube in local
 brew services start sonarqube
+brew services stop sonarqube
+brew services info sonarqube
