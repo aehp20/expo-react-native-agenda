@@ -57,9 +57,13 @@ npx expo lint
 npm run storybook-generate
 
 # Sonarqube in local
+To run the Sonarqube
+
+```
 brew services start sonarqube
 brew services stop sonarqube
 brew services info sonarqube
+```
 
 To scan files and directories using the sonar-project.properties file
 
