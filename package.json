@@ -1,7 +1,7 @@
 {
   "name": "expo-react-native-agenda",
   "main": "expo-router/entry",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
@@ -95,8 +95,14 @@
         "preset": {
           "name": "conventionalcommits",
           "type": [
-            { "type": "feat", "section": "Features"},
-            { "type": "fix", "section": "Bug Fixes"}
+            {
+              "type": "feat",
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "section": "Bug Fixes"
+            }
           ]
         }
       }
