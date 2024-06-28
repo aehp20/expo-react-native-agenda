@@ -49,14 +49,14 @@ Join our community of developers creating universal apps.
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
 
-# Commands
+## Commands
 npx expo start --localhost --android
 
 npx expo lint
 
 npm run storybook-generate
 
-# Sonarqube in local
+## Sonarqube in local
 To run the Sonarqube
 
 ```
@@ -71,12 +71,20 @@ To scan files and directories using the sonar-project.properties file
 sonar-scanner
 ```
 
-#Code Quality
+## Code Quality
 
+Using conventional commit and changelog
 ```
 npm i -D @commitlint/cli @commitlint/config-conventional
 npm i -D husky
 npm pkg set scripts.prepare="husky install"
 npm i -D conventional-changelog-cli
 npx conventional-changelog -i CHANGELOG.md -s -r 0
+```
+
+Using release-it
+```
+npm i -D release-it @release-it/conventional-changelog
+npm init release-it
+npm run release
 ```
