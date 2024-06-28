@@ -12,11 +12,13 @@
     "test:dev": "jest --coverage",
     "lint": "expo lint",
     "prepare": "husky install",
+    "version": "npx conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md",
     "local:android": "npx expo --localhost --android",
     "storybook-generate": "sb-rn-get-stories",
     "storybook": "cross-env STORYBOOK_ENABLED='true' expo start",
     "storybook:ios": "cross-env STORYBOOK_ENABLED='true' expo ios",
-    "storybook:android": "cross-env STORYBOOK_ENABLED='true' npx expo --localhost --android"
+    "storybook:android": "cross-env STORYBOOK_ENABLED='true' npx expo --localhost --android",
+    "release": "release-it"
   },
   "jest": {
     "preset": "jest-expo"
@@ -51,6 +53,7 @@
     "@react-native-async-storage/async-storage": "^1.23.1",
     "@react-native-community/datetimepicker": "^8.1.1",
     "@react-native-community/slider": "^4.5.2",
+    "@release-it/conventional-changelog": "^8.0.1",
     "@storybook/addon-ondevice-actions": "^7.6.20",
     "@storybook/addon-ondevice-controls": "^7.6.20",
     "@storybook/react": "^8.1.10",
@@ -60,6 +63,7 @@
     "@types/react": "~18.3.3",
     "@types/react-test-renderer": "^18.3.0",
     "babel-loader": "^8.3.0",
+    "conventional-changelog-cli": "^5.0.0",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.1.2",
     "eslint-config-prettier": "^9.1.0",
@@ -70,7 +74,32 @@
     "jest-expo": "~51.0.2",
     "prettier": "^3.3.2",
     "react-test-renderer": "18.2.0",
+    "release-it": "^17.4.0",
     "typescript": "~5.5.2"
   },
-  "private": true
+  "private": true,
+  "release-it": {
+    "$schema": "https://unpkg.com/release-it/schema/release-it.json",
+    "git": {
+      "commitMessage": "chore: release ${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "infile": "CHANGELOG.md",
+        "preset": {
+          "name": "conventionalcommits",
+          "type": [
+            { "type": "feat", "section": "Features"},
+            { "type": "fix", "section": "Bug Fixes"}
+          ]
+        }
+      }
+    }
+  }
 }

@@ -70,3 +70,13 @@ To scan files and directories using the sonar-project.properties file
 ```
 sonar-scanner
 ```
+
+#Code Quality
+
+```
+npm i -D @commitlint/cli @commitlint/config-conventional
+npm i -D husky
+npm pkg set scripts.prepare="husky install"
+npm i -D conventional-changelog-cli
+npx conventional-changelog -i CHANGELOG.md -s -r 0
+```
