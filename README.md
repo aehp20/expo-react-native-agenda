@@ -61,4 +61,8 @@ brew services start sonarqube
 brew services stop sonarqube
 brew services info sonarqube
 
+To scan files and directories using the sonar-project.properties file
+
+```
 sonar-scanner
+```
