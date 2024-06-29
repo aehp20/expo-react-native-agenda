@@ -27,3 +27,5 @@ android/
 sonar-project.properties
 
 coverage/
+
+ios/
