@@ -11,7 +11,7 @@
     "test": "jest --watchAll",
     "test:dev": "jest --coverage",
     "lint": "expo lint",
-    "prepare": "husky install",
+    "prepare": "husky",
     "version": "npx conventional-changelog -i CHANGELOG.md -s && git add CHANGELOG.md",
     "local:android": "npx expo --localhost --android",
     "storybook-generate": "sb-rn-get-stories",
