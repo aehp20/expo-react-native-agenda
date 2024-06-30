@@ -73,6 +73,11 @@ sonar-scanner
 
 ## Code Quality
 
+Husky
+```
+npm i -D husky
+```
+
 Validating Branch Names
 
 ```
@@ -83,7 +88,6 @@ printf "\nnpx validate-branch-name" >> .husky/pre-commit
 Using conventional commit and changelog
 ```
 npm i -D @commitlint/cli @commitlint/config-conventional
-npm i -D husky
 
 npm pkg set scripts.prepare="husky install"
 echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
