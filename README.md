@@ -92,6 +92,15 @@ npm i -D conventional-changelog-cli
 npx conventional-changelog -i CHANGELOG.md -s -r 0
 ```
 
+Lint Staged
+
+```
+npm install -D lint-staged
+Add .lintstagedrc file
+npm run prepare
+printf "\nnpx lint-staged" >> .husky/pre-commit
+```
+
 Using release-it
 ```
 npm i -D release-it @release-it/conventional-changelog
