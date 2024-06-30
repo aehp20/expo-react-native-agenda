@@ -24,9 +24,10 @@ export default function ExploreScreen() {
       <Text>This app includes example code to help you get started.</Text>
       <Collapsible title="File-based routing">
         <Text>
-          This app has two screens:{" "}
+          This app has three screens:{" "}
           <Text type="defaultSemiBold">app/(tabs)/index.tsx</Text> and{" "}
           <Text type="defaultSemiBold">app/(tabs)/explore.tsx</Text>
+          <Text type="defaultSemiBold">app/(tabs)/settings/_layout.tsx</Text>
         </Text>
         <Text>
           The layout file in{" "}
