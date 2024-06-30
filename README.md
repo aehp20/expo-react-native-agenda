@@ -85,6 +85,7 @@ Using conventional commit and changelog
 npm i -D @commitlint/cli @commitlint/config-conventional
 npm i -D husky
 npm pkg set scripts.prepare="husky install"
+echo "npx --no -- commitlint --edit \$1" > .husky/commit-msg
 npm i -D conventional-changelog-cli
 npx conventional-changelog -i CHANGELOG.md -s -r 0
 ```
