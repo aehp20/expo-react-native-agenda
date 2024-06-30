@@ -73,6 +73,13 @@ sonar-scanner
 
 ## Code Quality
 
+Validating Branch Names
+
+```
+npm install validate-branch-name --save-dev
+printf "\nnpx validate-branch-name" >> .husky/pre-commit
+```
+
 Using conventional commit and changelog
 ```
 npm i -D @commitlint/cli @commitlint/config-conventional
